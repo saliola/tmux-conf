@@ -1,8 +1,7 @@
 tmux-conf
 =========
 
-The included script ``install.sh`` automates the symlinking below,
-but not the installation of reattach-to-user-namespace.
+The included script ``install.sh`` automates the steps below.
 
 Clone repo::
 

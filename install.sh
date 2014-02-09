@@ -3,6 +3,9 @@
 # echo commands before execution (useful for tracing)
 set -x
 
+# exit script at first error
+set -e
+
 # Clone repo
 git clone https://github.com/saliola/tmux-conf.git ~/.tmux-conf
 
