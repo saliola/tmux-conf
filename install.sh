@@ -6,8 +6,10 @@ set -x
 # exit script at first error
 set -e
 
-# Clone repo
-git clone https://github.com/saliola/tmux-conf.git ~/.tmux-conf
+# Clone repo, if it doesn't exist
+if [ ! -d ~/.tmux-conf ]; then
+    git clone https://github.com/saliola/tmux-conf.git ~/.tmux-conf
+fi;
 
 UNAME=$(uname)
 
