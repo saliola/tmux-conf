@@ -23,13 +23,6 @@ if [[ $UNAME == 'Darwin' ]]; then
     # Create symlink
     ln -s ~/.tmux-conf/tmux-osx.conf ~/.tmux.conf
 
-    # install reattach-to-user-namespace
-    cd /tmp
-    git clone https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
-    cd tmux-MacOSX-pasteboard
-    make
-    sudo -k cp reattach-to-user-namespace /usr/local/bin/
-
     # restart the tmux server
     tmux kill-server
 fi
