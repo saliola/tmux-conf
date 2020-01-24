@@ -12,22 +12,24 @@ Linux
 
 Create symlinks::
 
+    ln -s ~/.tmux-conf ~/.tmux
     ln -s ~/.tmux-conf/tmux.conf ~/.tmux.conf
+
+Install plugin manager and plugins::
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ~/.tmux-conf/plugins/tpm/scripts/install_plugins.sh
 
 Mac OSX
 -------
 
 Create symlinks::
 
+    ln -s ~/.tmux-conf ~/.tmux
     ln -s ~/.tmux-conf/tmux-osx.conf ~/.tmux.conf
 
-Download and compile ``reattach-to-user-namespace``::
+Install plugin manager and plugins::
 
-    git clone https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
-    cd tmux-MacOSX-pasteboard
-    make
-    cp reattach-to-user-namespace /usr/local/bin/
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ~/.tmux-conf/plugins/tpm/scripts/install_plugins.sh
 
-Restart the tmux server::
-
-    tmux kill-server

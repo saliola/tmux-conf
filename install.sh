@@ -9,20 +9,20 @@ set -e
 # Clone repo, if it doesn't exist
 if [ ! -d ~/.tmux-conf ]; then
     git clone https://github.com/saliola/tmux-conf.git ~/.tmux-conf
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux-conf/plugins/tpm
 fi;
 
 UNAME=$(uname)
 
-# Linux: create symlink
+# Create symlinks
 if [[ $UNAME == 'Linux' ]]; then
+    ln -s ~/.tmux-conf ~/.tmux
     ln -s ~/.tmux-conf/tmux.conf ~/.tmux.conf
 fi
-
-# Mac OSX: create symlink and install ``reattach-to-user-namespace``
 if [[ $UNAME == 'Darwin' ]]; then
-    # Create symlink
+    ln -s ~/.tmux-conf ~/.tmux
     ln -s ~/.tmux-conf/tmux-osx.conf ~/.tmux.conf
-
-    # restart the tmux server
-    tmux kill-server
 fi
+
+# Install plugins
+~/.tmux-conf/plugins/tpm/scripts/install_plugins.sh
