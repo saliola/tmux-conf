@@ -17,7 +17,7 @@ UNAME=$(uname)
 # Create symlinks
 if [[ $UNAME == 'Linux' ]]; then
     ln -s ~/.tmux-conf ~/.tmux
-    ln -s ~/.tmux-conf/tmux.conf ~/.tmux.conf
+    ln -s ~/.tmux-conf/tmux-linux.conf ~/.tmux.conf
 fi
 if [[ $UNAME == 'Darwin' ]]; then
     ln -s ~/.tmux-conf ~/.tmux
