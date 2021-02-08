@@ -5,7 +5,7 @@ The included script ``install.sh`` automates the steps below.
 
 Clone repo::
 
-    git clone https://github.com/saliola/tmux-conf.git ~/.tmux-conf
+    git clone git@github.com:saliola/tmux-conf.git ~/.tmux-conf
 
 Linux
 -----
