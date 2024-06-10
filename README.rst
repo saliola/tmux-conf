@@ -18,6 +18,7 @@ Create symlinks::
 Install plugin manager and plugins::
 
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    tmux source ~/.tmux.conf
     ~/.tmux-conf/plugins/tpm/scripts/install_plugins.sh
 
 Mac OSX
@@ -31,5 +32,5 @@ Create symlinks::
 Install plugin manager and plugins::
 
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    tmux source ~/.tmux.conf
     ~/.tmux-conf/plugins/tpm/scripts/install_plugins.sh
-
